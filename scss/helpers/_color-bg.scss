@@ -1,0 +1,63 @@
+// All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
+@each $color, $value in $theme-colors {
+  .text-bg-#{$color} {
+    @if $color == "primary" {
+      color: #fff;
+    } @else { 
+      color: color-contrast($value) if($enable-important-utilities, !important, null);
+    }
+    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+  }
+}
+
+
+@each $color, $value in $blues {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $indigos {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $purples {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $pinks {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $reds {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $oranges {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $yellows {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $greens {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $teals {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+@each $color, $value in $cyans {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
